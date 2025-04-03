@@ -1,0 +1,33 @@
+version: "3"
+
+dotenv: [".env"]
+
+vars:
+  MACHINE_NAME: bezec-vm
+
+tasks:
+  vm:init:
+    desc: Initialize the podman machine
+    cmds:
+      - |
+        if ! podman machine list | grep -q "^{{.MACHINE_NAME}}$"; then
+          podman machine init {{.MACHINE_NAME}} --cpus 2 --disk-size 20 --memory 4096 --rootful
+        else
+          echo "Podman machine '{{.MACHINE_NAME}}' already exists."
+        fi
+  vm:start:
+    desc: Start the podman machine
+    deps:
+      - vm:init
+    cmds:
+      - podman machine start {{.MACHINE_NAME}}
+  vm:stop:
+    desc: Stop the podman machine
+    deps:
+      - vm:init
+    cmds:
+      - podman machine stop {{.MACHINE_NAME}}
+  app:run:
+    desc: Run the application
+    cmds:
+      - cargo run
