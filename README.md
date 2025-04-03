@@ -1,4 +1,4 @@
-# bezeC - Open Container Initiative Runtime Specification
+# bezeC - Open Container Initiative Runtime Specification implementation
 
 bezeC [bežec - Slovak for "runner"] is an implementation of the [Open Container Initiative Runtime Specification](https://github.com/opencontainers/runtime-spec) written in [Rust](https://www.rust-lang.org/).
 
