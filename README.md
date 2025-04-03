@@ -10,16 +10,16 @@ The goal is to implement linux only for now. Windows, Solaris, Z/OS, and macOS (
 
 ## Features
 
-[ ] Read the OCI runtime specification
-[ ] Implement the OCI runtime specification
-[ ] Create a container from an OCI image
-[ ] Run a container
-[ ] Stop a container
-[ ] Remove a container
-[ ] List containers
-[ ] Get container information
-[ ] Execute a command in a running container
-[ ] Copy files to/from a container
+ - [ ] Read the OCI runtime specification
+ - [ ] Implement the OCI runtime specification
+ - [ ] Create a container from an OCI image
+ - [ ] Run a container
+ - [ ] Stop a container
+ - [ ] Remove a container
+ - [ ] List containers
+ - [ ] Get container information
+ - [ ] Execute a command in a running container
+ - [ ] Copy files to/from a container
 
 ## Dependencies
 
